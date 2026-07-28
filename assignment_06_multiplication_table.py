@@ -72,3 +72,23 @@ def print_tables(n):
 
         if number != n:
             print("---------------------------")
+
+def main():
+    number = int(input("Enter a number: "))
+
+    if number <= 0:
+        print("Error: Number must be greater than 0.")
+        return
+
+    print_table(number)
+
+    n = int(input("\nEnter a number for tables from 1 to N: "))
+
+    if n <= 0:
+        print("Error: Number must be greater than 0.")
+        return
+
+    print_tables(n)
+
+
+main()            
