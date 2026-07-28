@@ -49,3 +49,20 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def print_fibonacci(n):
+    if n <= 0:
+        print("Error: Number of terms must be greater than 0.")
+        return
+
+    first = 0
+    second = 1
+
+    print("Fibonacci sequence:", end=" ")
+
+    for i in range(n):
+        print(first, end=" ")
+        next_number = first + second
+        first = second
+        second = next_number
+
+    print()
