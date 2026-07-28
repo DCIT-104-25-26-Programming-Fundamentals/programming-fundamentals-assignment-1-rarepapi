@@ -67,7 +67,7 @@ def print_fibonacci(n):
 
     print()
 
-    def is_fibonacci(number):
+def is_fibonacci(number):
     if number < 0:
         return False
 
