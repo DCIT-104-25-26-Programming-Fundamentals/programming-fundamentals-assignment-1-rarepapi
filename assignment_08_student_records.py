@@ -121,3 +121,33 @@ def add_student(students):
 
     print(f'Student "{name}" added successfully.')
 
+def display_students(students):
+    if len(students) == 0:
+        print("No students have been added yet.")
+        return
+
+    print("-" * 50)
+    print("Name\t\tID\t\tScores\t\tAverage")
+    print("-" * 50)
+
+    for student in students:
+        average = calculate_average(student["scores"])
+        scores = ", ".join(map(str, student["scores"]))
+
+        print(
+            f"{student['name']}\t{student['id']}\t{scores}\t{average}"
+        )
+
+    print("-" * 50)
+
+
+def find_student_average(students):
+    student_id = int(input("Enter student ID: "))
+
+    for student in students:
+        if student["id"] == student_id:
+            average = calculate_average(student["scores"])
+            print(f"{student['name']}'s average score: {average}")
+            return
+
+    print("Error: Student ID not found.")
