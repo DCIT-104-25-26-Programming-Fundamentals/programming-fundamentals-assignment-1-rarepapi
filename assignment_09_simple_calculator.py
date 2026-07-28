@@ -68,3 +68,28 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def add(num1, num2):
+    return num1 + num2
+
+
+def subtract(num1, num2):
+    return num1 - num2
+
+
+def multiply(num1, num2):
+    return num1 * num2
+
+
+def divide(num1, num2):
+    if num2 == 0:
+        return None
+
+    return round(num1 / num2, 2)
+
+
+def modulus(num1, num2):
+    return num1 % num2
+
+
+def exponent(num1, num2):
+    return num1 ** num2
