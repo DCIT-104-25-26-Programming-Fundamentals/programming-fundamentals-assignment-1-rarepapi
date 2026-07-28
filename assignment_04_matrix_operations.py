@@ -122,3 +122,54 @@ def multiply_matrices(matrix_a, matrix_b):
         result.append(row)
 
     return result
+
+def main():
+    print("PART A - Matrix Transpose")
+
+    rows = int(input("Enter number of rows: "))
+    cols = int(input("Enter number of columns: "))
+
+    matrix = read_matrix(rows, cols)
+
+    print("\nOriginal Matrix:")
+    display_matrix(matrix)
+
+    print("\nTransposed Matrix:")
+    display_matrix(transpose_matrix(matrix))
+
+
+    print("\nPART B - Matrix Addition")
+
+    print("Enter first matrix:")
+    matrix_a = read_matrix(rows, cols)
+
+    print("Enter second matrix:")
+    matrix_b = read_matrix(rows, cols)
+
+    print("\nSum Matrix:")
+    display_matrix(add_matrices(matrix_a, matrix_b))
+
+
+    print("\nPART C - Matrix Multiplication")
+
+    rows_a = int(input("Enter rows for Matrix A: "))
+    cols_a = int(input("Enter columns for Matrix A: "))
+
+    print("Enter Matrix A:")
+    matrix_a = read_matrix(rows_a, cols_a)
+
+    rows_b = int(input("Enter rows for Matrix B: "))
+    cols_b = int(input("Enter columns for Matrix B: "))
+
+    if cols_a != rows_b:
+        print("Error: Matrix multiplication is not possible.")
+        return
+
+    print("Enter Matrix B:")
+    matrix_b = read_matrix(rows_b, cols_b)
+
+    print("\nProduct Matrix:")
+    display_matrix(multiply_matrices(matrix_a, matrix_b))
+
+
+main()
