@@ -70,3 +70,24 @@ def find_min(numbers):
 
     return minimum
 
+def main():
+    n = int(input("How many numbers? "))
+
+    if n <= 0:
+        print("Error: Number of values must be greater than 0.")
+        return
+
+    numbers = []
+
+    for i in range(n):
+        number = float(input(f"Enter number {i + 1}: "))
+        numbers.append(number)
+
+    print("\nResults:")
+    print("Sum:", calculate_sum(numbers))
+    print("Average:", calculate_average(numbers))
+    print("Maximum:", find_max(numbers))
+    print("Minimum:", find_min(numbers))
+
+
+main()
