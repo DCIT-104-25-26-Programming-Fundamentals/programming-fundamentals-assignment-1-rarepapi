@@ -90,3 +90,34 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def calculate_average(scores):
+    total = 0
+
+    for score in scores:
+        total += score
+
+    return round(total / len(scores), 2)
+
+
+def add_student(students):
+    name = input("Student name: ")
+    student_id = int(input("Student ID: "))
+
+    number_of_scores = int(input("How many scores? "))
+
+    scores = []
+
+    for i in range(number_of_scores):
+        score = float(input(f"Enter score {i + 1}: "))
+        scores.append(score)
+
+    student = {
+        "name": name,
+        "id": student_id,
+        "scores": scores
+    }
+
+    students.append(student)
+
+    print(f'Student "{name}" added successfully.')
+
