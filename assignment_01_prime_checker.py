@@ -46,7 +46,15 @@ def is_prime(number):
             return False
 
     return True
-print("3")
+
+# Get input from the user
+number = int(input("Enter a number: "))
+
+# Call the function and display the result
+if is_prime(number):
+    print(f"{number} is a prime number.")
+else:
+    print(f"{number} is NOT a prime number.")
 
 
  
