@@ -91,3 +91,16 @@ def transpose_matrix(matrix):
         transpose.append(row)
 
     return transpose
+
+def add_matrices(matrix_a, matrix_b):
+    result = []
+
+    for i in range(len(matrix_a)):
+        row = []
+
+        for j in range(len(matrix_a[0])):
+            row.append(matrix_a[i][j] + matrix_b[i][j])
+
+        result.append(row)
+
+    return result
