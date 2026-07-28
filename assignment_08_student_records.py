@@ -151,3 +151,36 @@ def find_student_average(students):
             return
 
     print("Error: Student ID not found.")
+
+def main():
+    students = []
+
+    while True:
+        print("\n================================")
+        print("   STUDENT RECORD SYSTEM MENU")
+        print("================================")
+        print("1. Add student")
+        print("2. Display all students")
+        print("3. Calculate average score")
+        print("4. Quit")
+
+        choice = input("Enter your choice (1-4): ")
+
+        if choice == "1":
+            add_student(students)
+
+        elif choice == "2":
+            display_students(students)
+
+        elif choice == "3":
+            find_student_average(students)
+
+        elif choice == "4":
+            print("Goodbye!")
+            break
+
+        else:
+            print("Error: Invalid menu choice.")
+
+
+main()
